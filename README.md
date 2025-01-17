@@ -38,7 +38,7 @@ FREQUENTLY ASKED QUESTIONS
 
 1) Should I encounter an error, what should I do?
 
-   		-Contact the programmer at: ST10229540@vcconnect.edu.za for support
+   		-Contact the programmer at: fisosingulvrity.mkhize@gmail.com for support
 
 3) How is a profile protected?
 
@@ -51,8 +51,7 @@ FREQUENTLY ASKED QUESTIONS
 
 CONTACT THE DEVELOPER: Fisokuhle Mkhize
         
-        Email: ST10229540@vcconnect.edu.za
-        Contact no: 012 345 6789
+        Email: fisosingulvrity.mkhize@gmail.com
 
 -----------------------------------------------------------------------------------------------------------------------------------------
 
