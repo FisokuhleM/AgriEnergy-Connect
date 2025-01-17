@@ -1,0 +1,31 @@
+﻿@model List<AgriEnergyConnect.Models.RegistrationRequest>
+
+@{
+    ViewData["Title"] = "Requests";
+}
+
+<h1>Pending Requests</h1>
+<div class="row justify-content-center">
+    @foreach (var request in Model)
+    {
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
+            <div class="card my-2 store-card text-center">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <img src="~/images/user-icon.png" class="user-icon img-fluid rounded-circle mb-2" alt="User Icon">
+                        <h5 class="card-title mt-2">@request.FirstName @request.LastName</h5>
+                        <h6 class="card-title mt-2">@request.Email</h6>
+                        <p>@request.PhysicalAddress</p>
+                        <p>@request.City</p>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                    <form asp-controller="Requests" asp-action="Approve" asp-route-id="@request.Id" method="post">
+                        <button type="submit" class="btn btn-success">Approve</button>
+                    </form>
+                    <form asp-controller="Requests" asp-action="Decline" asp-route-id="@request.Id" method="post">
+                        <button type="submit" class="btn btn-danger">Decline</button>
+                    </form>
+                    </div>
+            </div>
+        </div>
+    }
+</div>

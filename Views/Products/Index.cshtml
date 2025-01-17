@@ -1,0 +1,28 @@
+﻿@model IEnumerable<AgriEnergyConnect.Models.Product>
+@{
+    ViewData["Title"] = "Products";
+}
+
+<div class="text-center">
+    <h2 class="mmy-4">Products</h2>
+    <a asp-area="" class="btn btn-success" asp-controller="Products" asp-action="Create">Add product</a>
+    <div class="row">
+        @foreach(var product in Model)
+        {
+            <div class="col-3">
+                <div class="card my-2 store-card">
+                    
+                        <img src="@product.imageURL" class="card-img-top">
+                        <div class="card-body">
+                          <h5 class="card-title">@product.Name</h5>
+                          <p class="card-text">@product.Category</p>
+                            <p class="card-text">@product.ProdDate.ToString("MMMM dd, yyyy")</p>
+                        </div>
+                    <a asp-controller="Products" class="btn btn-success" asp-action="Details" asp-route-id="@product.Id" class="a-cleanup">Product Details</a>
+                </div>
+
+
+            </div>
+        }
+    </div>
+</div>
